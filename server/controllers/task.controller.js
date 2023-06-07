@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
-const productModel = require('../modules/product.schema');
+const productModel = require('../models/product.schema');
 
 // task: #2
-exports.tackTwo = async(req,res)=>{
+exports.taskTwo = async(req,res)=>{
     try {
         
        const productData = await productModel.find({},{_id:0,name:1,price:1});
@@ -15,7 +15,7 @@ exports.tackTwo = async(req,res)=>{
 };
 
 // task: #3
-exports.tackThere = (req,res)=>{
+exports.taskThere = (req,res)=>{
     try {
 
         const userId = 12345678910;
@@ -35,7 +35,7 @@ exports.tackThere = (req,res)=>{
 };
 
 // task: #4
-exports.tackFour = (req,res)=>{
+exports.taskFour = (req,res)=>{
     try {
 
         res.status(200).json({message:"JWT token verifie successfully."});

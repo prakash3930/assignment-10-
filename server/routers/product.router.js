@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const { authenticate } = require('../middlewares/jwt.middleware');
-const { tackTwo, tackThere, tackFour } = require('../controllers/task.controller');
+const { taskTwo, taskThere, taskFour } = require('../controllers/task.controller');
 
 
 // task: #2
-router.get('/products',tackTwo);
+router.get('/products',taskTwo);
 
 // task: #3
-router.get("/jwt",tackThere);
+router.get("/jwt",taskThere);
 
 // task: #4
-router.get("/verifie",authenticate,tackFour);
+router.get("/verifie",authenticate,taskFour);
 
 module.exports = router;
